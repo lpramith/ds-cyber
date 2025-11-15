@@ -1,3 +1,6 @@
+import URLQRCode from "./assets/URL QR Code.png";
+
+
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Terminal, Database, Shield, Code, Brain, Lock } from 'lucide-react';
 
@@ -697,36 +700,63 @@ if bcrypt.checkpw(password, hashed):
       )
     },
     {
-      title: "Thank You!",
-      icon: Brain,
-      content: (
-        <div className="space-y-8 text-center">
-          <div className="text-7xl">🎉</div>
-          <h2 className="text-4xl font-bold text-gray-800">Thank You for Your Attention!</h2>
-          <p className="text-2xl text-gray-600">Keep Learning, Keep Building, Stay Secure!</p>
-          <div className="grid grid-cols-2 gap-6 mt-8">
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 text-white p-8 rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">Remember</h3>
-              <p className="text-lg">Data is the new oil, but security is the refinery that makes it valuable.</p>
-            </div>
-            <div className="bg-gradient-to-br from-red-500 to-orange-600 text-white p-8 rounded-lg">
-              <h3 className="text-2xl font-bold mb-4">Your Journey Starts Now</h3>
-              <p className="text-lg">Every expert was once a beginner. Start small, think big, keep learning!</p>
-            </div>
-          </div>
-          <div className="bg-green-50 p-6 rounded-lg mt-8">
-            <p className="text-xl font-bold text-green-900 mb-2">📝 Workshop Feedback</p>
-            <p className="text-gray-700">We'd love to hear your thoughts! Please share your feedback to help us improve.</p>
-          </div>
-          <div className="flex justify-center gap-8 mt-8 text-5xl">
-            <span>👨‍💻</span>
-            <span>🔐</span>
-            <span>📊</span>
-            <span>🚀</span>
-          </div>
+  title: "Thank You!",
+  icon: Brain,
+  content: (
+    <div className="space-y-8 text-center">
+      <div className="text-7xl">🎉</div>
+      <h2 className="text-4xl font-bold text-gray-800">
+        Thank You for Your Attention!
+      </h2>
+      <p className="text-2xl text-gray-600">
+        Keep Learning, Keep Building, Stay Secure!
+      </p>
+
+      <div className="grid grid-cols-2 gap-6 mt-8">
+        <div className="bg-gradient-to-br from-blue-500 to-purple-600 text-white p-8 rounded-lg">
+          <h3 className="text-2xl font-bold mb-4">Remember</h3>
+          <p className="text-lg">
+            Data is the new oil, but security is the refinery that makes it
+            valuable.
+          </p>
         </div>
-      )
-    }
+
+        <div className="bg-gradient-to-br from-red-500 to-orange-600 text-white p-8 rounded-lg">
+          <h3 className="text-2xl font-bold mb-4">Your Journey Starts Now</h3>
+          <p className="text-lg">
+            Every expert was once a beginner. Start small, think big, keep
+            learning!
+          </p>
+        </div>
+      </div>
+
+      {/* Feedback Section */}
+      <div className="bg-green-50 p-6 rounded-lg mt-8">
+        <p className="text-xl font-bold text-green-900 mb-2">📝 Workshop Feedback</p>
+        <p className="text-gray-700">
+          We’d love to hear your thoughts! Please share your feedback to help us improve.
+        </p>
+
+        {/* QR Code Added Here */}
+        <div className="flex justify-center mt-6">
+          <img
+            src={URLQRCode}
+            alt="Feedback QR Code"
+            className="w-40 h-40 object-contain rounded-lg shadow-md"
+          />
+        </div>
+      </div>
+
+      <div className="flex justify-center gap-8 mt-8 text-5xl">
+        <span>👨‍💻</span>
+        <span>🔐</span>
+        <span>📊</span>
+        <span>🚀</span>
+      </div>
+    </div>
+  )
+}
+
   ];
 
   const nextSlide = () => {
