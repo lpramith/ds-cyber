@@ -1,6 +1,5 @@
 import URLQRCode from "./assets/URL QR Code.png";
 
-
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Terminal, Database, Shield, Code, Brain, Lock } from 'lucide-react';
 
@@ -26,13 +25,7 @@ const WorkshopPresentation = () => {
             </div>
           </div>
           <p className="text-xl mt-8 text-gray-700">Duration: 2 Hours | Level: Beginner to Intermediate</p>
-          <p className="text-lg text-gray-600">
-  Speakers:
-  <br /> Mr. Sumukha R Kashyap
-  <br /> Mr. Deepak U
-  <br /> Mr. Pramith L
-</p>
-
+          <p className="text-lg text-gray-600">Speakers: [Your Names]</p>
         </div>
       )
     },
@@ -212,6 +205,61 @@ plt.show()`}</pre>
               <li>• Find the subject with highest average score</li>
               <li>• Identify students who need improvement</li>
             </ul>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Data Visualization: Telling Stories with Data",
+      icon: Code,
+      content: (
+        <div className="space-y-5">
+          <p className="text-xl text-gray-700">Data visualization transforms complex data into visual insights that anyone can understand</p>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-gradient-to-br from-blue-100 to-blue-50 p-5 rounded-lg">
+              <h4 className="font-bold text-lg mb-3 text-blue-900">Why Visualize Data?</h4>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li>👁️ <strong>See patterns instantly</strong> that numbers hide</li>
+                <li>📊 <strong>Compare trends</strong> across time periods</li>
+                <li>🎯 <strong>Identify outliers</strong> and anomalies</li>
+                <li>💡 <strong>Communicate insights</strong> to non-technical audiences</li>
+                <li>⚡ <strong>Make faster decisions</strong> with visual evidence</li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-purple-100 to-purple-50 p-5 rounded-lg">
+              <h4 className="font-bold text-lg mb-3 text-purple-900">Popular Chart Types</h4>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li>📈 <strong>Line Charts:</strong> Trends over time</li>
+                <li>📊 <strong>Bar Charts:</strong> Comparing categories</li>
+                <li>🥧 <strong>Pie Charts:</strong> Parts of a whole</li>
+                <li>🔵 <strong>Scatter Plots:</strong> Relationships between variables</li>
+                <li>🗺️ <strong>Heatmaps:</strong> Patterns in matrices</li>
+                <li>📦 <strong>Box Plots:</strong> Distribution analysis</li>
+              </ul>
+            </div>
+          </div>
+          <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm">
+            <p className="text-white mb-2">Quick Example: Creating a Bar Chart</p>
+            <pre>{`import matplotlib.pyplot as plt
+import pandas as pd
+
+# Sample data: Sales by region
+data = {'Region': ['North', 'South', 'East', 'West'],
+        'Sales': [45000, 38000, 52000, 41000]}
+df = pd.DataFrame(data)
+
+# Create bar chart
+plt.figure(figsize=(10, 6))
+plt.bar(df['Region'], df['Sales'], color=['blue', 'green', 'red', 'orange'])
+plt.title('Sales by Region', fontsize=16, fontweight='bold')
+plt.xlabel('Region')
+plt.ylabel('Sales (₹)')
+plt.grid(axis='y', alpha=0.3)
+plt.show()`}</pre>
+          </div>
+          <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4">
+            <p className="font-bold mb-2">🎨 Best Practices:</p>
+            <p className="text-sm text-gray-700">• Choose the right chart for your data • Keep it simple and clean • Use color purposefully • Label everything clearly • Remove unnecessary elements</p>
           </div>
         </div>
       )
@@ -423,6 +471,91 @@ check_password_strength("Str0ng!Pass")`}</pre>
               <li>• Add check for common passwords dictionary</li>
               <li>• Calculate time to crack using brute force</li>
             </ul>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Web Application Security & HTTPS",
+      icon: Lock,
+      content: (
+        <div className="space-y-5">
+          <p className="text-xl text-gray-700">Understanding how secure communication works on the web</p>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-red-50 p-5 rounded-lg border-l-4 border-red-500">
+              <h4 className="font-bold text-lg mb-3 text-red-900">HTTP vs HTTPS</h4>
+              <div className="space-y-3">
+                <div className="bg-white p-3 rounded">
+                  <p className="font-bold text-red-700">❌ HTTP (Not Secure)</p>
+                  <p className="text-sm text-gray-700 mt-1">• Data sent in plain text</p>
+                  <p className="text-sm text-gray-700">• Anyone can intercept and read</p>
+                  <p className="text-sm text-gray-700">• No encryption</p>
+                  <p className="text-sm text-gray-700">• Vulnerable to attacks</p>
+                </div>
+                <div className="bg-white p-3 rounded">
+                  <p className="font-bold text-green-700">✅ HTTPS (Secure)</p>
+                  <p className="text-sm text-gray-700 mt-1">• Encrypted communication</p>
+                  <p className="text-sm text-gray-700">• SSL/TLS certificates</p>
+                  <p className="text-sm text-gray-700">• Protected from eavesdropping</p>
+                  <p className="text-sm text-gray-700">• Verified server identity</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-blue-50 p-5 rounded-lg border-l-4 border-blue-500">
+              <h4 className="font-bold text-lg mb-3 text-blue-900">How HTTPS Works</h4>
+              <div className="space-y-2 text-sm text-gray-700">
+                <div className="bg-white p-3 rounded border-l-2 border-blue-400">
+                  <p className="font-bold">1. Handshake</p>
+                  <p>Browser and server exchange encryption keys</p>
+                </div>
+                <div className="bg-white p-3 rounded border-l-2 border-green-400">
+                  <p className="font-bold">2. Authentication</p>
+                  <p>Server proves identity with SSL certificate</p>
+                </div>
+                <div className="bg-white p-3 rounded border-l-2 border-purple-400">
+                  <p className="font-bold">3. Encryption</p>
+                  <p>All data encrypted before transmission</p>
+                </div>
+                <div className="bg-white p-3 rounded border-l-2 border-orange-400">
+                  <p className="font-bold">4. Secure Transfer</p>
+                  <p>Data travels safely between client-server</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-gradient-to-r from-green-100 to-teal-100 p-5 rounded-lg">
+            <h4 className="font-bold text-lg mb-3 text-green-900">🔒 Common Web Security Headers</h4>
+            <div className="grid grid-cols-2 gap-3 text-sm">
+              <div className="bg-white p-3 rounded">
+                <p className="font-bold text-blue-700">Content-Security-Policy</p>
+                <p className="text-gray-600">Prevents XSS attacks</p>
+              </div>
+              <div className="bg-white p-3 rounded">
+                <p className="font-bold text-green-700">Strict-Transport-Security</p>
+                <p className="text-gray-600">Forces HTTPS connections</p>
+              </div>
+              <div className="bg-white p-3 rounded">
+                <p className="font-bold text-purple-700">X-Frame-Options</p>
+                <p className="text-gray-600">Prevents clickjacking</p>
+              </div>
+              <div className="bg-white p-3 rounded">
+                <p className="font-bold text-red-700">X-Content-Type-Options</p>
+                <p className="text-gray-600">Stops MIME-type sniffing</p>
+              </div>
+            </div>
+          </div>
+          <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4">
+            <p className="font-bold text-lg mb-2">🛡️ Security Checklist for Developers</p>
+            <div className="grid grid-cols-2 gap-2 text-sm text-gray-700">
+              <p>✓ Always use HTTPS</p>
+              <p>✓ Implement security headers</p>
+              <p>✓ Keep dependencies updated</p>
+              <p>✓ Validate all user inputs</p>
+              <p>✓ Use secure cookies (HttpOnly, Secure)</p>
+              <p>✓ Implement rate limiting</p>
+              <p>✓ Enable CORS properly</p>
+              <p>✓ Regular security audits</p>
+            </div>
           </div>
         </div>
       )
@@ -694,7 +827,7 @@ if bcrypt.checkpw(password, hashed):
           <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 mt-8">
             <p className="text-lg font-bold mb-2">Stay Connected!</p>
             <p className="text-gray-700">Feel free to reach out to us for mentorship, project guidance, or career advice.</p>
-            <p className="text-sm text-gray-600 mt-3">Email: sumukharkashyap@gmail.com | LinkedIn: https://www.linkedin.com/in/sumukha-r-kashyap-00a2751ba/</p>
+            <p className="text-sm text-gray-600 mt-3">Email: [Your Email] | LinkedIn: [Your Profile]</p>
           </div>
         </div>
       )
@@ -724,20 +857,18 @@ if bcrypt.checkpw(password, hashed):
         <div className="bg-gradient-to-br from-red-500 to-orange-600 text-white p-8 rounded-lg">
           <h3 className="text-2xl font-bold mb-4">Your Journey Starts Now</h3>
           <p className="text-lg">
-            Every expert was once a beginner. Start small, think big, keep
-            learning!
+            Every expert was once a beginner. Start small, think big, keep learning!
           </p>
         </div>
       </div>
 
-      {/* Feedback Section */}
       <div className="bg-green-50 p-6 rounded-lg mt-8">
         <p className="text-xl font-bold text-green-900 mb-2">📝 Workshop Feedback</p>
         <p className="text-gray-700">
           We’d love to hear your thoughts! Please share your feedback to help us improve.
         </p>
 
-        {/* QR Code Added Here */}
+        {/* QR code */}
         <div className="flex justify-center mt-6">
           <img
             src={URLQRCode}
