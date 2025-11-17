@@ -25,7 +25,12 @@ const WorkshopPresentation = () => {
             </div>
           </div>
           <p className="text-xl mt-8 text-gray-700">Duration: 2 Hours | Level: Beginner to Intermediate</p>
-          <p className="text-lg text-gray-600">Speakers: [Your Names]</p>
+          <p className="text-lg text-gray-600">Speakers:</p>
+<div className="text-lg text-gray-600 flex flex-col">
+  <span>Pramith L</span>
+  <span>Sumukha R Kashyap</span>
+</div>
+
         </div>
       )
     },
